@@ -1,22 +1,18 @@
 import { TfiStatsUp } from "react-icons/tfi";
 import { useEffect, useState } from "react";
+import useFetchRecipes from "../hooks/useFetchRecipes";
 export default function Hero() {
-  const [topRecipes, setTopRecipes] = useState([]);
+  const { recipes } = useFetchRecipes(5);
 
-  useEffect(() => {
-    async function fetchRecipes() {
-      const response = await fetch("https://dummyjson.com/recipes?limit=3");
-      const data = await response.json();
-      setTopRecipes(data.recipes);
-    }
-    fetchRecipes();
-  }, []);
   return (
     <div className="carousel w-full h-[35rem]">
-      {topRecipes.map((recipe, i) => {
-        console.log(recipe);
+      {recipes.map((recipe, i) => {
         return (
-          <div id={`slide${i}`} className="carousel-item relative w-full">
+          <div
+            key={recipe.id}
+            id={`slide${i}`}
+            className="carousel-item relative w-full"
+          >
             <img
               src={recipe.image}
               className="w-full object-center object-cover"
