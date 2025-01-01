@@ -2,7 +2,7 @@ import { TfiStatsUp } from "react-icons/tfi";
 import { useEffect, useState } from "react";
 import useFetchRecipes from "../hooks/useFetchRecipes";
 export default function Hero() {
-  const { recipes } = useFetchRecipes(5);
+  const { recipes } = useFetchRecipes(9);
 
   return (
     <div className="carousel w-full h-[35rem]">
@@ -23,13 +23,15 @@ export default function Hero() {
                   <TfiStatsUp className="size-6" />
                   85% would make this again
                 </span>
-                <h1 className="text-5xl font-extrabold pb-4">{recipe.name}</h1>
+                <h1 className="text-5xl tracking-wider pb-4 font-lobster">
+                  {recipe.name}
+                </h1>
                 <p className="text-lg leading-relaxed max-w-[60ch] text-black/60 text-pretty">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                  iste tempore, cupiditate ea id similique optio quis unde,
-                  natus vitae, praesentium earum suscipit odit molestiae eos!
-                  Blanditiis possimus culpa aperiam officia! Ad omnis soluta
-                  laudantium.
+                  Pizza Margherita is basically a Neapolitan pizza, typically
+                  made with tomatoes, mozzarella cheese, garlic, fresh basil,
+                  and extra-virgin olive oil. I think of it as a sophisticated
+                  version of basic cheese pizza and also a wonderful Caprese
+                  salad, but with a crust. It’s so easy to make!
                 </p>
               </div>
             </div>

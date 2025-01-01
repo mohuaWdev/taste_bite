@@ -39,7 +39,7 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">
+        <a className="btn btn-ghost text-xl font-lobster tracking-wider font-medium">
           <IoFastFoodOutline className="text-primary size-8" />
           Taste_bite
         </a>
