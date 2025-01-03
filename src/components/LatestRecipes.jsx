@@ -1,11 +1,5 @@
-import { useState, useEffect } from "react";
-import { TfiStatsUp } from "react-icons/tfi";
-import { LuClock } from "react-icons/lu";
 import useFetchRecipes from "../hooks/useFetchRecipes";
-import { IoStar } from "react-icons/io5";
-import { IoFlagOutline } from "react-icons/io5";
 import { IoChevronForward } from "react-icons/io5";
-import { IoMdHeartEmpty } from "react-icons/io";
 import RecipeCard from "./RecipeCard";
 import { IoCalendarOutline } from "react-icons/io5";
 export default function LatestRecipes() {

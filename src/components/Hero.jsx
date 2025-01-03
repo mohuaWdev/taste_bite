@@ -2,7 +2,7 @@ import { TfiStatsUp } from "react-icons/tfi";
 import { useEffect, useState } from "react";
 import useFetchRecipes from "../hooks/useFetchRecipes";
 export default function Hero() {
-  const { recipes } = useFetchRecipes(9);
+  const { recipes } = useFetchRecipes();
 
   return (
     <div className="carousel w-full h-[35rem]">
